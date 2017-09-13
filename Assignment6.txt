@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+
+	int num;
+	char selection = 'Y'; 
+
+	do
+	{
+		cout << "Please enter an integer: ";
+		cin >> num;
+		if (num % 2 == 0)
+			cout << "\n\nYour integer is even.\n\n";
+		else
+			cout << "\n\nYour integer is odd.\n\n";
+
+		cout << "Would you like to evaluate another integer? (Y or N)\n\n";
+		cin >> selection;
+		system("cls");
+
+	} while (selection == 'Y');
+
+}
