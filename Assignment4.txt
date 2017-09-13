@@ -1,0 +1,5 @@
+1. p->q and q' -> p' are equivalent because of implication, q is a result of p therefore if there is no q there was no p.
+
+2. (p->r) ^ (q->r) <=> (p v q) -> r these are equivalent because both p and q imply r, therefore either p or q can imply r. 
+
+3.(p v q)' <=> (q' ^ 'r)? (a ^ b)^c <=> a ^ (b ^ c)?
