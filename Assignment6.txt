@@ -9,8 +9,17 @@ int main()
 
 	do
 	{
+		
 		cout << "Please enter an integer: ";
 		cin >> num;
+		while (!cin)
+		{
+			cout << "That was no integer! Please enter an integer: ";
+			cin.clear();
+			cin.ignore();
+			cin >> num;
+		}
+
 		if (num % 2 == 0)
 			cout << "\n\nYour integer is even.\n\n";
 		else
@@ -20,6 +29,6 @@ int main()
 		cin >> selection;
 		system("cls");
 
-	} while (selection == 'Y');
+	} while (toupper(selection) == 'Y');
 
 }
