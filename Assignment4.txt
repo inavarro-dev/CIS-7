@@ -1,5 +1,16 @@
-1. p->q and q' -> p' are equivalent because of implication, q is a result of p therefore if there is no q there was no p.
+1.
+p->q and q' -> p'
+p->q hyp
+p' v q imp
+(p')' v q' dn
+q' v p dn
+q' -> 'p imp
 
-2. (p->r) ^ (q->r) <=> (p v q) -> r these are equivalent because both p and q imply r, therefore either p or q can imply r. 
+2. 
+(p->r) ^ (q->r) <=> (p v q) -> r
+(p->r) ^ (q->r) hyp
+r'->(q ^ p)' imp
+r' -> q' v p' de moore
+(q v p) -> r double negation
 
-3.(p v q)' <=> (q' ^ 'r)? (a ^ b)^c <=> a ^ (b ^ c)?
+3.(p v q)' <=> (q' ^ 'p)? (a ^ b)^c <=> a ^ (b ^ c)?
