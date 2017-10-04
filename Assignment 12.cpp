@@ -90,9 +90,7 @@ int gcdEuclidian(int num1, int num2)
 	//a is largest number, b is smallest number
 	int a;
 	int b;
-	int q;
 	int r;
-	int gcd = 0;
 	if (num1 <= num2)
 	{
 		b = num1;
@@ -107,7 +105,6 @@ int gcdEuclidian(int num1, int num2)
 	//a=bq + r
 	while (b != 0)
 	{
-		q = a / b;
 		r = a % b;
 		
 		a = b;
