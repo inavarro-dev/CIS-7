@@ -79,6 +79,8 @@ int gcdFinder(int num1, int num2)
 	{
 		if (num1%i == 0 && num2%i == 0)
 			gcd = i;
+		// . used to visualize number of loops to find answer
+		cout << ".";
 	}
 	
 
@@ -110,6 +112,7 @@ int gcdEuclidian(int num1, int num2)
 		a = b;
 		b = r;
 
+		// . used to visualize number of loops to find answer
 		cout << ".";
 
 		a = gcdEuclidian(a, b);
