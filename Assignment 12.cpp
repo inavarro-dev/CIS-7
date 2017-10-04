@@ -1,4 +1,5 @@
 #include <iostream>
+#include "time.h"
 using namespace std;
 
 int gcdFinder(int num1, int num2);
@@ -7,6 +8,10 @@ int gcdEuclidian(int num1, int num2);
 int main()
 {
 
+
+	clock_t t;
+
+	
 	int num1;
 	int num2;
 	int gcd;
@@ -44,9 +49,20 @@ int main()
 		} while (toupper(gcdMethod) != 'B' && toupper(gcdMethod) != 'E');
 
 		if (toupper(gcdMethod) == 'B')
+		{
+			t = clock();
 			gcd = gcdFinder(num1, num2);
+			t = clock() - t;
+			cout << "it took " << (((double)t) / CLOCKS_PER_SEC) *1000 << " milliseconds to calculate the gcd\n\n";
+		}
 		if (toupper(gcdMethod) == 'E')
+		{
+			t = clock();
 			gcd = gcdEuclidian(num1, num2);
+			t = clock() - t;
+			cout << "it took " << (((double)t) / CLOCKS_PER_SEC)*1000000000 << " nanoseconds to calculate the gcd\n\n";
+			
+		}
 
 		cout << "The GCD is " << gcd << "." << endl << endl;
 		
@@ -79,8 +95,6 @@ int gcdFinder(int num1, int num2)
 	{
 		if (num1%i == 0 && num2%i == 0)
 			gcd = i;
-		// . used to visualize number of loops to find answer
-		cout << ".";
 	}
 	
 
@@ -111,9 +125,6 @@ int gcdEuclidian(int num1, int num2)
 		
 		a = b;
 		b = r;
-
-		// . used to visualize number of loops to find answer
-		cout << ".";
 
 		a = gcdEuclidian(a, b);
 	} 
