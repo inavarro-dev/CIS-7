@@ -1,0 +1,12 @@
+- [ ]  Prove:  If n = 25, 100, or 169, then n is a perfect square and is the sum of two perfect squares.  Indicate which method of proof you used.
+25= 5^2 = 9 + 16 = 3^2 + 4^2, 100 = 10^2 = 36 + 64 = 6^2 + 8^2, 169 = 13^2 = 25 + 144 = 5^2 + 12^2 Proof by exhaustion.
+
+- [ ]  Prove:  The sum of two odd integers is even.  Hint: By definition, even integers can be expressed as 2n, thus odd integers can be expressed as 2n + 1	
+let x = (2p + 1) and y + (2q +1)  where p and q are integers, then x + y = (2p + 1) + (2q + 1) = 2p + 2q + 2 = 2(p + q + 1) where p + q + 1 is an integer.
+Therefore x + y is even.
+
+- [ ]  Prove:  The sum of an even integer and it's square is even
+let x = 2n where n is an integer x + x^2 = 2n + (2n)(2n) = 2(n + nn) where n + nn is an integer, therefore x + x^2 is even.
+
+- [ ]  Prove by Contradiction: If n squared is odd, then n is odd
+let n represent an odd number. n = 2x +1, n^2 = 4x^2 + 4X + 1 , (4x^2 + 4X) is even, therefore 4x^2 + 4X + 1  cannot be even.
